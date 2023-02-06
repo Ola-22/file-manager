@@ -15,14 +15,10 @@ let PageSize = 10;
 
 function BlockedUser() {
   const [active, setActive] = useState(false);
-  const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);
   const [currentDataOfUser, setCurrentDataOfUser] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [blockedUser, setBlockedUser] = useState([]);
-  const [posts, setPosts] = useState([]);
-
-
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
@@ -154,7 +150,7 @@ function BlockedUser() {
                 <Pagination
                   className="pagination-bar"
                   currentPage={currentPage}
-                  totalCount={data.length}
+                  totalCount={blockedUser.length}
                   pageSize={PageSize}
                   onPageChange={(page) => setCurrentPage(page)}
                 />

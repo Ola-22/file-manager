@@ -9,14 +9,13 @@ import { useMemo } from "react";
 import { useCallback } from "react";
 import Sidebar from "../../Components/Sidebar";
 import Swal from "sweetalert2";
-import { collection, onSnapshot, deleteDoc, doc, Firestore } from "firebase/firestore"
+import { collection, onSnapshot, deleteDoc, doc } from "firebase/firestore"
 import db from "./../../firebase"
 
 let PageSize = 10;
 
 function ReportedPosts() {
   const [active, setActive] = useState(false);
-  const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);
   const [currentDataOfUser, setCurrentDataOfUser] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
@@ -215,7 +214,7 @@ function ReportedPosts() {
                 <Pagination
                   className="pagination-bar"
                   currentPage={currentPage}
-                  totalCount={data.length}
+                  totalCount={reportsPosts.length}
                   pageSize={PageSize}
                   onPageChange={(page) => setCurrentPage(page)}
                 />

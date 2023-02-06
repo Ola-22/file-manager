@@ -4,7 +4,6 @@ import "./style.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdMoreVert } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
-import axios from "axios";
 import { useEffect } from "react";
 import Pagination from "../../Components/Pagination";
 import { useMemo } from "react";
