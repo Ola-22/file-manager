@@ -1,0 +1,68 @@
+.modal-wrapper{
+    transform: translateY(0vh);
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    background: #fff;
+    width: auto;
+    height: auto;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    width: 450px;
+    height: 250px;
+    & .modal-header {
+        padding: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    
+        & p {
+          color: #2d98da;
+          font-size: 22px;
+          text-transform: uppercase;
+          margin-inline-start: 35px;
+        }
+    
+        & span {
+          cursor: pointer;
+        }
+      }
+      & .modal-body{
+        display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    & p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+        .btn-container{
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+            & button{
+                padding: .625em 1.1em;
+                border-radius: .25em;
+                border: none;
+                font-size: 1em;
+                color: #fff;
+                cursor: pointer;
+            }
+            & .yes-btn{
+                background: #41a594;
+            }
+            & .no-btn{
+                background: rgb(221, 51, 51);
+            }
+        }
+      }
+
+}
